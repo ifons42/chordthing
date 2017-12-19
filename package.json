@@ -1,7 +1,7 @@
 {
-  "name": "chordthing",
+  "name": "Chordthing",
   "version": "0.0.1",
-  "description": "Chordthing is a thing that things chords.",
+  "description": "Chordthing plays chords input by the user.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,8 @@
     "url": "git+https://github.com/ifons42/chordthing.git"
   },
   "contributors": [
-    "Ivan Fonseca <ivanfon@riseup.net> (https://github.com/IvanFon)"
+    "Ivan Fonseca <ivanfon@riseup.net> (https://github.com/IvanFon)",
+    "Jonah Hamer-Wilson <jhame1@ocsdsb.ca> (https://github.com/jonah-hw)"
   ],
   "license": "GPL-3.0",
   "bugs": {
