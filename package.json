@@ -1,0 +1,21 @@
+{
+  "name": "chordthing",
+  "version": "0.0.1",
+  "description": "Chordthing is a thing that things chords.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifons42/chordthing.git"
+  },
+  "contributors": [
+    "Ivan Fonseca <ivanfon@riseup.net> (https://github.com/IvanFon)"
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ifons42/chordthing/issues"
+  },
+  "homepage": "https://github.com/ifons42/chordthing#readme"
+}
