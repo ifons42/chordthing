@@ -54,7 +54,8 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: './dist/',
+              outputPath: `${__dirname}/dist`,
+              publicPath: `${__dirname}/dist`,
               useRelativePath: true,
             },
           },
