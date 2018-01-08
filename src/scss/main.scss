@@ -1,0 +1,12 @@
+@import "../../node_modules/bootswatch/dist/superhero/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "../../node_modules/bootswatch/dist/superhero/bootswatch";
+
+// About modal
+div#aboutModal {
+  span#aboutVersion {
+    font-size: 1rem;
+    color: lightslategray;
+  }
+}
+
