@@ -1,5 +1,5 @@
 {
-  "name": "Chordthing",
+  "name": "chordthing",
   "version": "0.0.1",
   "description": "Chordthing plays chords input by the user.",
   "main": "index.js",
