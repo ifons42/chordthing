@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import 'underscore';
 import 'backbone';
-import 'mustache';
+import 'handlebars';
 import 'bootstrap';
 
 // Styles

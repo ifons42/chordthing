@@ -54,11 +54,14 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: `${__dirname}/dist`,
-              publicPath: `${__dirname}/dist`,
-              useRelativePath: true,
             },
           },
+        ],
+      },
+      {
+        test: /\.handlebars$/,
+        use: [
+          'handlebars-loader',
         ],
       },
     ],
