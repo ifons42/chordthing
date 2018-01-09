@@ -2,11 +2,22 @@
 @import "~bootstrap/scss/bootstrap";
 @import "../../node_modules/bootswatch/dist/superhero/bootswatch";
 
+$secondary-colour: lightslategray;
+
 // About modal
 div#aboutModal {
   span#aboutVersion {
     font-size: 1rem;
-    color: lightslategray;
+    color: $secondary-colour;
+  }
+}
+
+// App
+div#app {
+  // Sidebar & editor
+  div.app-col {
+    margin-top: 15px;
+    border: 1px solid $secondary-colour;
   }
 }
 
