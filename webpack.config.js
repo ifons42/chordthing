@@ -1,7 +1,7 @@
 const FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const packageJson = require('./package.json');
+const config = require('./project-config.js');
 
 module.exports = {
   entry: './src/js/index.js',
@@ -73,8 +73,8 @@ module.exports = {
       filename: 'dist/index.html',
       template: 'src/html/index.html',
 
-      title: 'chordthing',
-      version: packageJson.version,
+      title: config.title,
+      version: config.version,
     }),
   ],
 };
