@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import * from 'loglevel';
 
 // Config
 import * as config from '../../../project-config';
@@ -13,6 +14,7 @@ export default class AboutModal {
       version: config.version,
       githubImage: require('../../img/GitHub-Mark-32px.png'),
     }));
+    log.info('about modal template loaded');
   }
 }
 
