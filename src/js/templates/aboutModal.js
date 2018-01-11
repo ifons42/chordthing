@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import * from 'loglevel';
+import * as log from 'loglevel';
 
 // Config
 import * as config from '../../../project-config';
