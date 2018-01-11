@@ -8,9 +8,10 @@ import 'bootstrap';
 import '../scss/main.scss';
 
 // Templates
-import './templates/aboutModal';
+import AboutModal from './templates/aboutModal';
 
 $(window).ready(() => {
-  console.log('loaded');
+  // Load templates
+  AboutModal.load();
 });
 
