@@ -19,5 +19,14 @@ div#app {
     margin-top: 15px;
     border: 1px solid $secondary-colour;
   }
+
+  // Sidebar
+  div#sidebar {
+    form#options {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
 }
 
