@@ -2,7 +2,13 @@
 @import "~bootstrap/scss/bootstrap";
 @import "../../node_modules/bootswatch/dist/superhero/bootswatch";
 
-$secondary-colour: lightslategray;
+@import "./globals";
+
+@import "./sidebar";
+
+hr {
+  color: $secondary-colour;
+}
 
 // About modal
 div#aboutModal {
@@ -15,18 +21,10 @@ div#aboutModal {
 // App
 div#app {
   // Sidebar & editor
-  div.app-col {
-    margin-top: 15px;
+  div.row > div {
+    margin-top: 10px;
+    padding-top: 20px;
     border: 1px solid $secondary-colour;
   }
-
-  // Sidebar
-  div#sidebar {
-    form#options {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-
 }
 

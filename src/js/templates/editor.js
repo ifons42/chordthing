@@ -1,9 +1,6 @@
 import $ from 'jquery';
 import * as log from 'loglevel';
 
-// Config
-import * as config from '../../../project-config';
-
 // Handlebars template
 import * as editorTemplate from '../../templates/editor.handlebars';
 
