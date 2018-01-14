@@ -6,7 +6,7 @@ import ChordView from './ChordView';
 
 class ChordListView extends View {
   constructor(options) {
-    options.tagName = 'ul';
+    options.tagName = 'div';
     super(options);
   }
 
@@ -20,6 +20,7 @@ class ChordListView extends View {
       const chord = new ChordView({
         model: this.model.at(i),
       });
+      chord.index = i;
 
       // Add chord to list
       this.$el.append(chord.$el);

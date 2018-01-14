@@ -1,17 +1,28 @@
+/* eslint no-param-reassign: "off" */
+/* global jtab */
+
 import { View } from 'backbone';
 
-import Chord from '../models/ChordModel';
-
 class ChordView extends View {
-  defaults() {
-    return {
-      tagName: 'li',
-      model: Chord,
-    };
+  constructor(options) {
+    options.tagName = 'div';
+    super(options);
   }
 
   render() {
-    this.$el.html(`<li>${this.model.get('chord')}</li>`);
+    this.$el.html(`
+      <div class="col">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" value="${this.model.get('chord')}">
+          </div>
+        </form>
+        <div class="chord-guitar-tab chordonly" data-chord-index="${this.index}"></div>
+      </div>
+      `);
+
+    // Render guitar tab
+    jtab.render($(`div.chord-guitar-tab[data-chord-index="${this.index}"]`), this.model.get('chord'));
     return this;
   }
 }
