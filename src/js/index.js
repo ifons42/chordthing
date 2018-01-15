@@ -1,5 +1,4 @@
 // Libraries
-import _ from 'underscore';
 import $ from 'jquery';
 import 'bootstrap';
 import * as log from 'loglevel';

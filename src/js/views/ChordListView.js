@@ -48,6 +48,31 @@ const ChordListView = Backbone.View.extend({
         }
       });
     },
+    'click #clear-chords': function () {
+      // Show modal
+      this.clearModal.modal('show');
+    },
+    'click #clear-modal-delete': function () {
+      // Delete all chords
+      this.model.reset();
+      // Re-render
+      this.render();
+      // Hide modal
+      this.clearModal.modal('hide');
+    },
+    'click #clear-modal-nvm': function () {
+      // Hide modal
+      this.clearModal.modal('hide');
+    },
+  },
+
+  initialize() {
+    // Clear all modal
+    this.clearModal = this.$el.find('div#clear-modal');
+    // Initialize clear modal
+    this.clearModal.modal({
+      show: false,
+    });
   },
 
   render() {
