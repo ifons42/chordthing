@@ -29,38 +29,35 @@ $(window).ready(() => {
 
 
   const chord1 = new Chord({
-    chord: 'Cmaj7',
+    chord: 'C',
   });
   const chord2 = new Chord({
-    chord: 'F',
+    chord: 'Cmaj7',
   });
   const chord3 = new Chord({
-    chord: 'E',
+    chord: 'C7',
   });
   const chord4 = new Chord({
-    chord: 'A7',
+    chord: 'C6',
   });
   const chord5 = new Chord({
-    chord: 'B7',
+    chord: 'Fmaj7',
   });
   const chord6 = new Chord({
-    chord: 'Bmaj7',
+    chord: 'F7',
   });
   const chord7 = new Chord({
-    chord: 'Bm',
+    chord: 'G7',
   });
   const chord8 = new Chord({
-    chord: 'A',
-  });
-  const chord9 = new Chord({
-    chord: 'Bm7b5',
+    chord: 'C',
   });
 
   const chords = new Chords({
     model: Chord,
   }, [
     chord1, chord2, chord3, chord4, chord5,
-    chord6, chord7, chord8, chord9,
+    chord6, chord7, chord8,
   ]);
 
   const chordList = new ChordListView({
