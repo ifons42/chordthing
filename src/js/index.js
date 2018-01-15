@@ -64,7 +64,7 @@ $(window).ready(() => {
   ]);
 
   const chordList = new ChordListView({
-    el: $('#chord-list'),
+    el: $('#chord-list-view'),
     model: chords,
   });
   chordList.render();

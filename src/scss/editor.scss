@@ -1,5 +1,7 @@
 // Editor
 div#app div#editor {
+  padding-top: 0;
+
   div#chord-list {
     padding-bottom: 30px;
     display: flex;
@@ -18,10 +20,18 @@ div#app div#editor {
       padding-right: auto;
       display: inline-block;
 
+      div.input-group {
+        width: 75%;
+        margin: 0 auto 10px;
+      }
+
       input {
-        border-radius: 10px;
-        margin: 0 auto;
-        width: 50%;
+        border-radius: 10px 0px 0px 10px;
+      }
+
+      button {
+        border-radius: 0px 10px 10px 0px;
+        float: left;
       }
 
       div.chord-guitar-tab {

@@ -5,6 +5,8 @@
 import Backbone from 'backbone';
 import * as log from 'loglevel';
 
+import * as closeIcon from '../../img/octicons/x.svg';
+
 const ChordView = Backbone.View.extend({
   tagName: 'div',
   className: 'chord-view',
@@ -17,16 +19,24 @@ const ChordView = Backbone.View.extend({
       this.render();
       log.info(`chord ${this.index} changed to ${this.model.get('chord')}`);
     },
+    'click button.delete-chord': function () {
+      this.collection.remove(this.model);
+      this.remove();
+      log.info(`chord ${this.index} deleted`);
+    },
   },
 
   render() {
     this.$el.html(`
       <div class="col">
-        <form>
-          <div class="form-group">
-            <input type="text" class="form-control chord-input" value="${this.model.get('chord')}">
+        <div class="input-group">
+          <input type="text" class="form-control chord-input" value="${this.model.get('chord')}">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-danger delete-chord">
+              <img src="${closeIcon}">
+            </button>
           </div>
-        </form>
+        </div>
         <div class="chord-guitar-tab chordonly" data-chord-index="${this.index}"></div>
       </div>
     `);
