@@ -65,5 +65,9 @@ $(window).ready(() => {
     model: chords,
   });
   chordList.render();
+
+  // Hide loading
+  $('div#loading').fadeOut(1000);
+  $('div#full-app').fadeIn(500);
 });
 
