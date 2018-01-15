@@ -1,10 +1,11 @@
-@import "../../node_modules/bootswatch/dist/superhero/variables";
+@import "~bootswatch/dist/superhero/variables";
 @import "~bootstrap/scss/bootstrap";
-@import "../../node_modules/bootswatch/dist/superhero/bootswatch";
+@import "~bootswatch/dist/superhero/bootswatch";
 
 @import "./globals";
 
 @import "./sidebar";
+@import "./editor";
 
 hr {
   color: $secondary-colour;
@@ -15,6 +16,10 @@ div#aboutModal {
   span#aboutVersion {
     font-size: 1rem;
     color: $secondary-colour;
+  }
+
+  img {
+    width: 32px;
   }
 }
 

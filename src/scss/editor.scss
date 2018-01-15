@@ -1,0 +1,42 @@
+// Editor
+div#app div#editor {
+  padding-top: 0;
+
+  div#chord-list {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    div.chord-view {
+      background-color: darken(rgb(43, 62, 80), 1);
+      border-radius: 5px;
+      margin: 10px 10px;
+    }
+
+    div.col {
+      color: black;
+      font-size: 13px;
+      padding-left: auto;
+      padding-right: auto;
+      display: inline-block;
+
+      div.input-group {
+        width: 75%;
+        margin: 0 auto 10px;
+      }
+
+      input {
+        border-radius: 10px 0px 0px 10px;
+      }
+
+      button {
+        border-radius: 0px 10px 10px 0px;
+        float: left;
+      }
+
+      div.chord-guitar-tab {
+        margin: 0 auto;
+      }
+    }
+  }
+}

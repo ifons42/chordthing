@@ -1,5 +1,6 @@
 const FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config = require('./project-config.js');
 
@@ -62,6 +63,13 @@ module.exports = {
           'handlebars-loader',
         ],
       },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      },
     ],
   },
 
@@ -74,5 +82,15 @@ module.exports = {
       title: config.title,
       version: config.version,
     }),
+    new CopyWebpackPlugin([
+      {
+        from: './lib/jtab/javascripts/*.js',
+        to: './dist/',
+      },
+      {
+        from: './lib/jtab/css/jtab-helper.css',
+        to: './dist/',
+      },
+    ]),
   ],
 };
