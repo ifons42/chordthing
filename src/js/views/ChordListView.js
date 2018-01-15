@@ -5,7 +5,7 @@
 import Backbone from 'backbone';
 import * as Soundfont from 'soundfont-player';
 import * as teoria from 'teoria';
-// import * as log from 'loglevel';
+import * as log from 'loglevel';
 
 import Chord from '../models/ChordModel';
 import ChordView from './ChordView';
@@ -25,7 +25,7 @@ const ChordListView = Backbone.View.extend({
       this.render();
     },
     'click #play-chords': function () {
-      Soundfont.instrument(new AudioContext(), 'acoustic_guitar_nylon').then((piano) => {
+      Soundfont.instrument(new AudioContext(), (this.instrument || 'acoustic_guitar_nylon')).then((piano) => {
         piano.play('C4');
         for (let i = 0; i < this.model.length; i += 1) {
           ((count, model) => {
@@ -96,6 +96,13 @@ const ChordListView = Backbone.View.extend({
     }
 
     return this;
+  },
+
+  changeInstrument(val) {
+    if (val) {
+      this.instrument = val;
+      log.info(`Instrument changed to ${val}`);
+    }
   },
 });
 

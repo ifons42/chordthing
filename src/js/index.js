@@ -1,3 +1,5 @@
+/* eslint no-unused-vars: "off" */
+
 // Libraries
 import $ from 'jquery';
 import 'bootstrap';
@@ -15,16 +17,18 @@ import Editor from './templates/editor';
 import Chord from './models/ChordModel';
 import Chords from './collections/ChordsCollection';
 import ChordListView from './views/ChordListView';
+import SidebarView from './views/SidebarView';
+import Settings from './models/SettingsModel';
 
 // Set logging level
-log.setLevel('trace');
+log.setDefaultLevel('warn');
 
 $(window).ready(() => {
   // Load templates
   log.info('loading templates');
   HelpModal.load();
   AboutModal.load();
-  Sidebar.load();
+  Sidebar.load(log.getLevel());
   Editor.load();
 
   log.info('templates loaded');
@@ -67,6 +71,14 @@ $(window).ready(() => {
     model: chords,
   });
   chordList.render();
+
+  const settings = new Settings();
+
+  const sidebar = new SidebarView({
+    el: $('div#sidebar'),
+    model: settings,
+  });
+  sidebar.chordsView = chordList;
 
   // Hide loading
   $('div#loading').fadeOut(1000);
