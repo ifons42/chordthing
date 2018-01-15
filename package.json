@@ -1,6 +1,6 @@
 {
   "name": "chordthing",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Chordthing plays chords input by the user.",
   "main": "index.js",
   "scripts": {
