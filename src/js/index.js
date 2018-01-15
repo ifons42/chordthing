@@ -7,6 +7,7 @@ import * as log from 'loglevel';
 import '../scss/main.scss';
 
 // Templates
+import HelpModal from './templates/helpModal';
 import AboutModal from './templates/aboutModal';
 import Sidebar from './templates/sidebar';
 import Editor from './templates/editor';
@@ -21,6 +22,7 @@ log.setLevel('trace');
 $(window).ready(() => {
   // Load templates
   log.info('loading templates');
+  HelpModal.load();
   AboutModal.load();
   Sidebar.load();
   Editor.load();
