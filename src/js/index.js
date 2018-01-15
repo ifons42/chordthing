@@ -1,4 +1,5 @@
 // Libraries
+import _ from 'underscore';
 import $ from 'jquery';
 import 'bootstrap';
 import * as log from 'loglevel';
@@ -68,5 +69,9 @@ $(window).ready(() => {
     model: chords,
   });
   chordList.render();
+
+  // Hide loading
+  $('div#loading').fadeOut(1000);
+  $('div#full-app').fadeIn(500);
 });
 
