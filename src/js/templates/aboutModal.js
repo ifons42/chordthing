@@ -7,7 +7,7 @@ import * as config from '../../../project-config';
 // Handlebars template
 import * as aboutModalTemplate from '../../templates/aboutModal.handlebars';
 
-import * as githubMarkImage from '../../img/GitHub-Mark-32px.png';
+import * as githubMarkImage from '../../img/octicons/mark-github.svg';
 
 export default class AboutModal {
   static load() {
