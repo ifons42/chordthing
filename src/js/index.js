@@ -35,25 +35,25 @@ $(window).ready(() => {
     chord: 'F',
   });
   const chord3 = new Chord({
-    chord: 'Bmaj7',
+    chord: 'E',
   });
   const chord4 = new Chord({
-    chord: 'Bmaj7',
+    chord: 'A7',
   });
   const chord5 = new Chord({
-    chord: 'Bmaj7',
+    chord: 'B7',
   });
   const chord6 = new Chord({
     chord: 'Bmaj7',
   });
   const chord7 = new Chord({
-    chord: 'Bmaj7',
+    chord: 'Bm',
   });
   const chord8 = new Chord({
-    chord: 'Bmaj7',
+    chord: 'A',
   });
   const chord9 = new Chord({
-    chord: 'Bmaj7',
+    chord: 'Bm7b5',
   });
 
   const chords = new Chords({
