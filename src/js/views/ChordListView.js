@@ -1,7 +1,11 @@
 /* eslint no-param-reassign: ["error", { "props": false }] */
 /* eslint func-names: "off" */
+/* eslint no-loop-func: "off" */
 
 import Backbone from 'backbone';
+import * as Soundfont from 'soundfont-player';
+import * as teoria from 'teoria';
+// import * as log from 'loglevel';
 
 import Chord from '../models/ChordModel';
 import ChordView from './ChordView';
@@ -19,6 +23,30 @@ const ChordListView = Backbone.View.extend({
       this.model.add(chord);
       // Re-render
       this.render();
+    },
+    'click #play-chords': function () {
+      Soundfont.instrument(new AudioContext(), 'acoustic_guitar_nylon').then((piano) => {
+        piano.play('C4');
+        for (let i = 0; i < this.model.length; i += 1) {
+          ((count, model) => {
+            setTimeout(() => {
+              // Create chord
+              const chord = teoria.chord(model.get('chord'));
+              // Loop through notes
+              let noteNum = 0;
+              for (const item of chord.notes()) {
+                ((noteCount, note) => {
+                  setTimeout(() => {
+                    // Play note
+                    piano.play(note.midi());
+                  }, noteNum * 50);
+                })(noteNum, item);
+                noteNum += 1;
+              }
+            }, count * 1000);
+          })(i, this.model.at(i));
+        }
+      });
     },
   },
 

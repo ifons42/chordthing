@@ -59,6 +59,8 @@
     "loglevel": "^1.6.1",
     "mustache": "^2.3.0",
     "popper.js": "^1.12.9",
+    "soundfont-player": "^0.10.6",
+    "teoria": "^2.5.0",
     "underscore": "^1.8.3"
   }
 }
