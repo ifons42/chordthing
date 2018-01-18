@@ -25,6 +25,16 @@ const SidebarView = Backbone.View.extend({
         log.setLevel('warn');
       }
     },
+    'change #setting-note-delay': function () {
+      const setting = this.$el.find('#setting-note-delay').val();
+      this.chordsView.changeNoteDelay(setting);
+      log.info(`note delay changed to ${setting}`);
+    },
+    'change #setting-chord-delay': function () {
+      const setting = this.$el.find('#setting-chord-delay').val();
+      this.chordsView.changeNoteDelay(setting);
+      log.info(`chord delay changed to ${setting}`);
+    },
   },
 
   initialize() {

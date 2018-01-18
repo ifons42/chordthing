@@ -39,11 +39,11 @@ const ChordListView = Backbone.View.extend({
                   setTimeout(() => {
                     // Play note
                     piano.play(note.midi());
-                  }, noteNum * 50);
+                  }, noteNum * this.noteDelay);
                 })(noteNum, item);
                 noteNum += 1;
               }
-            }, count * 1000);
+            }, count * this.chordDelay);
           })(i, this.model.at(i));
         }
       });
@@ -103,6 +103,16 @@ const ChordListView = Backbone.View.extend({
       this.instrument = val;
       log.info(`Instrument changed to ${val}`);
     }
+  },
+
+  changeNoteDelay(val) {
+    this.noteDelay = val;
+    log.info(`note delay ${val}`);
+  },
+
+  changeChordDelay(val) {
+    this.chordDelay = val;
+    log.info(`chord delay ${val}`);
   },
 });
 
